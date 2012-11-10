@@ -1,4 +1,3 @@
-[![build status](https://secure.travis-ci.org/Munter/node-histogram.png)](http://travis-ci.org/Munter/node-histogram)
 Histogram
 =========
 
