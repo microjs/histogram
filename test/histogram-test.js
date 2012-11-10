@@ -1,6 +1,6 @@
 var vows = require('vows'),
     assert = require('assert'),
-    histogram = require('../lib/index.js');
+    histogram = require('..');
 
 vows.describe('histogram').addBatch({
 	'Histogram of gradient.png': {

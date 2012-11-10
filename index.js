@@ -97,10 +97,8 @@
             });
         };
 
-    if (typeof module !== 'undefined') {
-        // Assume nodejs
+    if (typeof window === 'undefined') {
         Canvas = require('canvas');
-        module.exports = histogram;
     } else {
         // Polyfill canvas constructor
         Canvas = function (width, height) {
@@ -111,15 +109,16 @@
             return canvas;
         };
         Canvas.Image = Image;
-
-        if (typeof define === 'function') {
-            // AMD module
-            define([], function () {
-                return histogram;
-            });
-        } else if (window) {
-            // Fall back to installing histogram in window scope
-            window.histogram = histogram;
-        }
+    }
+    if (typeof module !== 'undefined') {
+        module.exports = histogram;
+    } else if (typeof define === 'function') {
+        // AMD module
+        define([], function () {
+            return histogram;
+        });
+    } else if (window) {
+        // Fall back to installing histogram in window scope
+        window.histogram = histogram;
     }
 }());
