@@ -28,7 +28,6 @@
         "type": "git",
         "url": "git://github.com/Munter/node-histogram.git"
     },
-    "main": "lib/index.js",
     "dependencies": {
         "canvas": "=0.12.1"
     },
@@ -41,9 +40,7 @@
         "node": "*"
     },
     "scripts": {
-        "pretest": "npm install",
         "test": "vows",
-        "posttest": "uglifyjs -nc lib/index.js > histogram.min.js",
         "prepublish": "npm test"
     }
 }
