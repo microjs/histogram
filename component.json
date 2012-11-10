@@ -1,0 +1,14 @@
+{
+  "name": "histogram",
+  "repo": "microjs/histogram",
+  "description": "Provides a histogram data structure of png, gif and jpeg images using canvas.",
+  "version": "0.1.2",
+  "keywords": ["histogram", "image", "png", "jpeg", "jpg", "gif"],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ],
+  "twitter": "@ForbesLindesay",
+  "license": "MIT"
+}
