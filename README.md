@@ -1,10 +1,17 @@
+[![Build Status](https://secure.travis-ci.org/microjs/histogram.png?branch=master)](https://travis-ci.org/microjs/histogram)
 Histogram
 =========
 
 Provides a histogram data structure from PNG, JPEG or GIF files using canvas.
-This library works in nodejs and in any canvas supporting browser using <a href="https://raw.github.com/Munter/node-histogram/master/histogram.min.js">histogram.min.js</a>.
-In the browser histogram will be available in `window.histogram`
-You can also use require.js instead, keeping your global scope clean.
+This library works in nodejs and in any canvas supporting browser.
+
+Install npm:
+
+    npm install histogram
+
+Install client:
+
+    component install microjs/histogram
 
 
 Example usage
@@ -15,29 +22,17 @@ NodeJS
 var histogram = require('histogram');
 
 histogram(fileName || Buffer, function (data) {
-    console.log(filePath + ' has ' + data.colors.rgba + ' colors');
+  console.log(filePath + ' has ' + data.colors.rgba + ' colors');
 });
 ```
 
-Browser with require.js
+Browser with component
 ``` javascript
-require(['path/to/histogram.min.js'], function (histogram) {
-    histogram(URL || FileReader.result, function (data) {
-        console.log(filePath + ' has ' + data.colors.rgba + ' colors');
-    });
+var histogram = require('histogram');
+histogram(URL || FileReader.result, function (data) {
+  console.log(filePath + ' has ' + data.colors.rgba + ' colors');
 });
 ```
-
-Vanilla browser
-``` html
-<script src="path/to/histogram.min.js"></script>
-<script>
-    histogram(URL || FileReader.result, function (data) {
-        console.log(filePath + ' has ' + data.colors.rgba + ' colors');
-    });
-</script>
-```
-
 
 Data structure
 --------------
